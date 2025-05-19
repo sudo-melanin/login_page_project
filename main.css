@@ -20,41 +20,46 @@ h2{
   padding-top: 35px;
   padding-bottom: 25px;
   font-weight: bold;
+  padding-top: 10px;
 }
 /*.input-group{
   display: block;
   align-items: left;*/
   
 .input-group{
-  display: block;
+  display: flex;
   flex-direction: column;
-  text-align: start;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 25px;
-  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 30px;
   width: 100%;
+}
+.input-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+hr{
+  padding-top: 0;
+  width: calc(100% - 50px);
+  outline: none;
   border: none;
+  border-bottom: 1px solid gray;
+  
 }
 .input-group label{
-  display: block;
   text-align: left;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   font-size: 12px;
 }
-.input-group input{
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-}
+
 .input-group input:focus{
   outline: none;
   border: none;
 }
-input[type="text"], input[type="password"]{
+.input-wrapper input{
   border: none;
-  width: 90%;
+  outline: none;
 }
 a{
   text-decoration: none;
@@ -65,16 +70,19 @@ a{
   text-align: right;
   font-size: 12px;
  color: rgb(77, 75, 75);
+ padding: 10px 30px 35px 0px;
  
 }
 button{
   background-image: linear-gradient(to right, #ffff66, #447711);
-  padding: 5px 95px 5px 95px;
+  padding: 12px;
   font-size: 1.2rem;
   border-radius: 18px;
   font-weight: bold;
-  color: white;
-  min-width: 60%;
+  color: #ffffff;
+  width: 80%;
+  max-width: 300px;
+  
 }
 button:hover{
   background: linear-gradient(to right, #ffff66, #447711);
@@ -87,23 +95,21 @@ button:hover{
 .sign-up-option{
   display: flex;
   flex-direction: column;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 .sign-up-option p{
   font-size: 14px;
   font-style: italic;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 .social-login{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
   align-items: stretch;
-}
-.social-login a{
-  width: 30px;
-  height: 30px;
+  gap: 15px;
+  padding-bottom: 35px;
+
 }
 .gmail-icon-fa{
   background-color: #db4437;
@@ -144,9 +150,23 @@ button:hover{
   height: 30px;
 }
 .custom-signup{
-  padding-top: 75px;
+  padding-top: 40px;
 }
 .new-user{
   display: inline-block;
   padding-top: 25px;
+}
+@media (max-width: 600px) {
+  #main-group{
+    width:90%;
+    height: auto;
+    padding: 20px; 
+  }
+  .input-group{
+    padding: 15px;
+  }
+  .social-login a{
+    width: 40px;
+    height: 40px;
+  }
 }

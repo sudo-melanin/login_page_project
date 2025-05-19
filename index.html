@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <title>Enter Details for Access</title>
@@ -15,20 +15,24 @@
     <h2>Login</h2>
     <form>
       <div class="input-group">
-        <label type="text" for="username">Username:</label>
-        <i class="fa-solid fa-user"></i>
-         <input id="username" type="text" placeholder="Enter your username" required>
-          <hr>
+        <label for="username">Username:</label>
+        <div class="input-wrapper">  
+          <i class="fa-solid fa-user"></i>
+          <input id="username" type="text" placeholder="Enter your username" required>
+        </div> 
       </div>
+      <hr>
       <div class="input-group">
         <label for="password">
           Password
         </label>
-        <i class="fa-solid fa-lock"></i>
-        <input id="password" type="password" placeholder="Enter your password" required>
-        <hr>
-        <a href="#" alt="Recover password" class="forgot-password">forgot password?</a>
-      </div>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-lock"></i>
+          <input id="password" type="password" placeholder="Enter your password" required>
+        </div>
+      </div> 
+      <hr>
+      <a href="#" class="forgot-password">forgot password?</a>
       <div class="btn">
         <button type="submit">Sign In</button>
       </div>
@@ -43,7 +47,7 @@
         </a>
       </div>
       <div class="custom-signup">
-        <p>  New User?  <br><span class="new-user">sign up <a href="#" alt="sign up now">HERE</a></span></p>
+        <p>  New User?  <br><span class="new-user">sign up <a href="#">HERE</a></span></p>
         
     </div>
     </div>
