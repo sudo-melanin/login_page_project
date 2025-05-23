@@ -1,0 +1,170 @@
+:root {
+  --main-background-color: linear-gradient(to right, #ffff66, #447711);
+  --form-background-color: rgba(223, 217, 217, 0.664);
+  --fb-btn-background-color: rgba(24, 28, 231, 0.8);
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 16px;
+  background-image: var(--main-background-color);
+  padding-bottom: 40px;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+.header img{
+  width: 60px;
+  margin-bottom: 10px;
+}
+.header h1 {
+  font-weight: bold;
+  color: rgb(14, 10, 6);
+  background-color: rgba(223, 217, 217, 0.664);
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 3px 5px 5px 3px;
+}
+.header p {
+  font-size: 0.75em;
+  font-weight: bold;
+  margin-top: 0px;
+
+}
+.form-wrapper {
+  width: 80vw;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 2em 1em;
+  background-color: var(--form-background-color);
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+.fb-signup{
+  display: block;
+  margin: 20px auto;
+  background-color: var(--fb-btn-background-color);
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 6px 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif;
+}
+.form-wrapper p {
+  text-align: center;
+  width: 45%;
+  margin: 0 auto;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 0;
+  
+}
+fieldset{
+  border: none;
+  padding: 1.5rem 0;
+  border-bottom: 3px solid #dbdaf5a8;
+}
+fieldset:last-of-type{
+  border-bottom: none;
+}
+form label:not(.inline-label){
+  display: block;
+  margin: 0.5rem 0;
+  margin-left: 10px;
+}
+input, 
+textarea,
+select {
+  width: 100%;
+  padding: 0.4em 0.6em;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgba(243, 239, 239, 0.664);
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  
+}
+select.gender{
+  display: block;
+  width: 93%;
+  margin: 1.5rem 10px 0 10px;
+}
+.inline{
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+input, textarea, select {
+  background-color: rgba(243, 239, 239, 0.664);
+  outline: none;
+  border: none;
+}
+.inline-label{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 10px;
+  flex-wrap: wrap;
+}
+.inline-label a {
+  color: black;
+}
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: rgba(243, 239, 239, 0.664);
+  border-color: white;
+  min-width: 300px;
+  border-radius: 20px;
+}
+.fb-signup:hover,
+input[type="submit"]:hover{
+  cursor: pointer;
+  background-color: var(--form-background-color);
+}
+.inline-label a:hover {
+  text-decoration: none;
+  color: #0056b3;
+}
+
+@media (max-width: 500px) {
+  .form-wrapper {
+    width: 90vw;
+  }
+
+  input[type="submit"] {
+    min-width: unset;
+    width: 90%;
+  }
+
+  .fb-signup {
+    width: 90%;
+  }
+
+  .form-wrapper p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}

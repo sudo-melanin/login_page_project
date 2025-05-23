@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <title>Register New Account</title>
+</head>
+
+<body>
+  <div class="header">
+    <img src="./favicon.png">
+    <h1> Register a New Account</h1>
+    <p class="required-note">Fields marked with <span style="color: red;">*</span> are required.</p>
+  </div>
+  <button class="fb-signup">Sign up with facebook</button>
+
+  <div class="form-wrapper">
+    <p>OR Sign Up</p>
+    <form method="post" action="#">
+      <fieldset>
+        <label for="full-name">Full Name: <input id="full-name" name="full-name" type="text" required >
+        </label>
+        <label for="email">Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required />
+        </label>
+        <label for="dob">Date of Birth: <input type="date" id="dob" name="dob" required /></label>
+        <select class="Gender">
+          <option>Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account type (required)</legend>
+        <label for="personal-account" ><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
+        <label for="business-account" ><input id="business-account" type="radio" name="account-type" class="inline" /> Business</label>
+      </fieldset>
+      <label for="bio">Brief Introduction:
+        <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+      </label>
+
+      <label for="terms-and-conditions" class="inline-label">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </label>
+      <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+      <input type="submit" value="Submit" />
+
+    </form>
+
+  </div>
+
+</body>

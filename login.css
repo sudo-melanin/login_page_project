@@ -1,3 +1,9 @@
+:root {
+  --main-background-color: linear-gradient(to right, #ffff66, #447711);
+  --form-background-color: rgb(252, 250, 250);
+  --fb-btn-background-color: rgba(24, 28, 231, 0.8);
+}
+
 *{
   box-sizing: border-box;
 }
